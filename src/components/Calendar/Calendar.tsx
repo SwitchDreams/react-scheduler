@@ -101,7 +101,6 @@ export const Calendar: FC<CalendarProps> = ({
         projectsPerPerson
       );
       if (onClickDay && data.isDayFree) {
-        console.log("oe");
         onClickDay(e, data);
       }
     }
