@@ -79,5 +79,5 @@ export const focusedData = (
   );
   const isDayFree = disposition.taken.hours === 0 ? true : false;
 
-  return { date: dateFormat, resourseIndex: resourceIndex, isDayFree: isDayFree };
+  return { date: dateFormat, resourceIndex: resourceIndex, isDayFree: isDayFree };
 };
