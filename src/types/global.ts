@@ -4,6 +4,12 @@ export type FilterButtonState = -1 | 0 | 1;
 
 type ZoomLevelTuple = typeof allZoomLevel;
 
+export type FocusedData = {
+  date: string;
+  resourceIndex: number;
+  isDayFree: boolean;
+};
+
 export type ZoomLevel = ZoomLevelTuple[number];
 export type LangCodes = "en" | "pl" | "de" | "pt-BR";
 export type Config = {
