@@ -6,7 +6,7 @@ type ZoomLevelTuple = typeof allZoomLevel;
 
 export type FocusedData = {
   date: string;
-  resourseIndex: number;
+  resourceIndex: number;
   isDayFree: boolean;
 };
 
