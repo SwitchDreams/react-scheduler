@@ -87,7 +87,8 @@ export const Calendar: FC<CalendarProps> = ({
       startDate: Day,
       rowsPerItem: number[],
       projectsPerPerson: SchedulerProjectData[][][],
-      zoom: ZoomLevel
+      zoom: ZoomLevel,
+      pageNum: number
     ) => {
       if (!gridRef.current) return;
       const { left, top } = gridRef.current.getBoundingClientRect();
@@ -101,7 +102,7 @@ export const Calendar: FC<CalendarProps> = ({
         projectsPerPerson
       );
       if (onClickDay && data.isDayFree) {
-        onClickDay(e, data, currentPageNum);
+        onClickDay(e, data, pageNum);
       }
     }
   );
@@ -132,7 +133,7 @@ export const Calendar: FC<CalendarProps> = ({
 
   useEffect(() => {
     const handleOnClickDay = (e: MouseEvent) => {
-      clickDay.current(e, startDate, rowsPerItem, projectsPerPerson, zoom);
+      clickDay.current(e, startDate, rowsPerItem, projectsPerPerson, zoom, currentPageNum);
     };
 
     const gridArea = gridRef.current;
@@ -144,7 +145,7 @@ export const Calendar: FC<CalendarProps> = ({
     return () => {
       gridArea.removeEventListener("click", handleOnClickDay);
     };
-  }, [debouncedHandleMouseOver, projectsPerPerson, rowsPerItem, startDate, zoom]);
+  }, [debouncedHandleMouseOver, projectsPerPerson, rowsPerItem, startDate, zoom, currentPageNum]);
 
   useEffect(() => {
     const handleMouseOver = (e: MouseEvent) => {
