@@ -68,7 +68,7 @@ function App() {
           onFilterData={handleFilterData}
           config={{ zoom: 1, maxRecordsPerPage: maxRecordsPerPage }}
           onItemClick={(data) => console.log("clicked: ", data)}
-          onClickDay={(e, date) => console.log(date)}
+          onClickDay={(e, date, pageNum) => console.log(date)}
         />
       ) : (
         <StyledSchedulerFrame>
@@ -80,7 +80,7 @@ function App() {
             onTileClick={handleTileClick}
             onFilterData={handleFilterData}
             onItemClick={(data) => console.log("clicked: ", data)}
-            onClickDay={(e, date) => console.log(date)}
+            onClickDay={(e, date, pageNum) => console.log(date)}
           />
         </StyledSchedulerFrame>
       )}

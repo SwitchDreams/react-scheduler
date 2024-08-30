@@ -101,7 +101,7 @@ export const Calendar: FC<CalendarProps> = ({
         projectsPerPerson
       );
       if (onClickDay && data.isDayFree) {
-        onClickDay(e, data);
+        onClickDay(e, data, currentPageNum);
       }
     }
   );
