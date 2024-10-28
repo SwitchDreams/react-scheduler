@@ -20,6 +20,7 @@ const Scheduler = ({
   onClearFilterData,
   onItemClick,
   onClickDay,
+  onSearch,
   isLoading
 }: SchedulerProps) => {
   const appConfig: Config = useMemo(
@@ -74,6 +75,7 @@ const Scheduler = ({
                   topBarWidth={topBarWidth ?? 0}
                   onItemClick={onItemClick}
                   onClickDay={onClickDay}
+                  onSearchChange={onSearch}
                 />
               </StyledInnerWrapper>
             </StyledOutsideWrapper>

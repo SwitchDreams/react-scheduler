@@ -25,7 +25,8 @@ export const Calendar: FC<CalendarProps> = ({
   onTileClick,
   onItemClick,
   topBarWidth,
-  onClickDay
+  onClickDay,
+  onSearchChange,
 }) => {
   const [tooltipData, setTooltipData] = useState<TooltipData>(initialTooltipData);
   const [filteredData, setFilteredData] = useState(data);
@@ -123,6 +124,9 @@ export const Calendar: FC<CalendarProps> = ({
     setSearchPhrase(phrase);
     debouncedFilterData.current.cancel();
     debouncedFilterData.current(data, phrase);
+    if (onSearchChange) {
+      onSearchChange(phrase);
+    }
   };
 
   const handleMouseLeave = useCallback(() => {

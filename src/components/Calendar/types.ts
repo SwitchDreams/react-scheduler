@@ -11,6 +11,7 @@ export type CalendarProps = {
   onTileClick?: (data: SchedulerProjectData) => void;
   onItemClick?: (data: SchedulerItemClickData) => void;
   onClickDay?: (e: MouseEvent, data: FocusedData, currentPageNum: number) => void;
+  onSearchChange?: (phrase: string) => void;
 };
 
 export type StyledSpanProps = {
