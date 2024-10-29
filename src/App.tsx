@@ -69,6 +69,7 @@ function App() {
           config={{ zoom: 1, maxRecordsPerPage: maxRecordsPerPage }}
           onItemClick={(data) => console.log("clicked: ", data)}
           onClickDay={(e, date, pageNum) => console.log(date)}
+          onSearch={(phrase) => console.log(phrase)}
         />
       ) : (
         <StyledSchedulerFrame>
@@ -81,6 +82,7 @@ function App() {
             onFilterData={handleFilterData}
             onItemClick={(data) => console.log("clicked: ", data)}
             onClickDay={(e, date, pageNum) => console.log(date)}
+            onSearch={(phrase) => console.log(phrase)}
           />
         </StyledSchedulerFrame>
       )}

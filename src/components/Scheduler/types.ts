@@ -18,6 +18,7 @@ export type SchedulerProps = {
   onClearFilterData?: () => void;
   onItemClick?: (data: SchedulerItemClickData) => void;
   onClickDay?: (e: MouseEvent, data: FocusedData, currentPageNum: number) => void;
+  onSearch?: (phrase: string) => void;
 };
 
 export type StyledOutsideWrapperProps = {
