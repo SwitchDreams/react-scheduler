@@ -16,13 +16,13 @@
 </div>
 <hr />
 
+> This is a SwitchDreams fork to improve the original package for our needs.
+
 ### Installation
 
 ```bash
 # yarn
-yarn add '@bitnoi.se/react-scheduler'
-# npm
-npm install '@bitnoi.se/react-scheduler'
+yarn add '@switchdreams/react-scheduler'
 ```
 
 ### Example usage
@@ -30,13 +30,13 @@ npm install '@bitnoi.se/react-scheduler'
 1. import required styles for scheduler
 
 ```ts
-import "@bitnoi.se/react-scheduler/dist/style.css";
+import "@switchdreams/react-scheduler/dist/style.css";
 ```
 
 2. Import Scheduler component into your project
 
 ```ts
-import { Scheduler, SchedulerData } from "@bitnoi.se/react-scheduler";
+import { Scheduler, SchedulerData } from "@switchdreams/react-scheduler";
 
 default export function Component() {
   const [filterButtonState, setFilterButtonState] = useState(0);
